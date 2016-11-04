@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91861ED1DB556C7000E8173 /* MultiplesThreeAndFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91861EC1DB556C7000E8173 /* MultiplesThreeAndFive.swift */; };
+		E91861EF1DB5591A000E8173 /* SmallestMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91861EE1DB5591A000E8173 /* SmallestMultiple.swift */; };
 		E923CE371D92FC960023D809 /* Euler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E923CE2D1D92FC960023D809 /* Euler.framework */; };
 		E923CE3C1D92FC960023D809 /* EulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923CE3B1D92FC960023D809 /* EulerTests.swift */; };
 		E923CE3E1D92FC960023D809 /* Euler.h in Headers */ = {isa = PBXBuildFile; fileRef = E923CE301D92FC960023D809 /* Euler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E923CE481D92FCB00023D809 /* PrimeFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923CE471D92FCB00023D809 /* PrimeFactors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E91861EC1DB556C7000E8173 /* MultiplesThreeAndFive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplesThreeAndFive.swift; sourceTree = "<group>"; };
+		E91861EE1DB5591A000E8173 /* SmallestMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallestMultiple.swift; sourceTree = "<group>"; };
 		E923CE2D1D92FC960023D809 /* Euler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Euler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E923CE301D92FC960023D809 /* Euler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Euler.h; sourceTree = "<group>"; };
 		E923CE311D92FC960023D809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E923CE361D92FC960023D809 /* EulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E923CE3B1D92FC960023D809 /* EulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulerTests.swift; sourceTree = "<group>"; };
 		E923CE3D1D92FC960023D809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E923CE471D92FCB00023D809 /* PrimeFactors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				E923CE301D92FC960023D809 /* Euler.h */,
+				E923CE471D92FCB00023D809 /* PrimeFactors.swift */,
+				E91861EC1DB556C7000E8173 /* MultiplesThreeAndFive.swift */,
+				E91861EE1DB5591A000E8173 /* SmallestMultiple.swift */,
 				E923CE311D92FC960023D809 /* Info.plist */,
 			);
 			path = Euler;
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					E923CE2C1D92FC960023D809 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					E923CE351D92FC960023D809 = {
@@ -196,6 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91861EF1DB5591A000E8173 /* SmallestMultiple.swift in Sources */,
+				E91861ED1DB556C7000E8173 /* MultiplesThreeAndFive.swift in Sources */,
+				E923CE481D92FCB00023D809 /* PrimeFactors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +333,7 @@
 		E923CE421D92FC960023D809 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.austinsironyard.Euler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +353,7 @@
 		E923CE431D92FC960023D809 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +372,7 @@
 		E923CE451D92FC960023D809 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = EulerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.austinsironyard.EulerTests;
@@ -367,6 +384,7 @@
 		E923CE461D92FC960023D809 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = EulerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.austinsironyard.EulerTests;
@@ -394,6 +412,7 @@
 				E923CE431D92FC960023D809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E923CE441D92FC960023D809 /* Build configuration list for PBXNativeTarget "EulerTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +421,7 @@
 				E923CE461D92FC960023D809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
